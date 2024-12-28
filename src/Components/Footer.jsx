@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-800 text-white py-4 mt-12 mb-4">
+    <footer className="bg-blue-600  text-white py-4 px-5 mt-12 mb-4 rounded-full">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row px-4 justify-between items-center">
         <div className="text-center lg:text-left mb-4 lg:mb-0">
           <p className="text-lg font-bold">Your Blog Name</p>

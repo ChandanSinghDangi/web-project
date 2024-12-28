@@ -2,14 +2,15 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import man from "../../public/download.jpg"
+// import man from "../../public/download.jpg"
+import user from "../assets/user.jpg"
 
 import { useEffect, useState } from 'react';
 import Posts from "../assets/Posts";
 import Post from './Post';
 import { Link } from 'react-router-dom';
 import PostDetail from './PostDetail';
-import chat from '../../public/chat.png'
+// import chat from '../../public/chat.png'
 const Home = () => {
     const [posts, setPosts] = useState([]);
     // eslint-disable-next-line no-unused-vars
@@ -24,10 +25,10 @@ const Home = () => {
     // Showing only the first 4 posts on the homepage
     const postsToDisplay = posts.slice(0, 4);
     const testimonials = [
-        { author: 'Alice Johnson', content: 'Absolutely love the content! It has been incredibly helpful in my coding journey.' },
-        { author: 'Bob Thompson', content: 'The tutorials are well-explained, and the code samples are clear. Great job!' },
-        { author: 'Charlie Williams', content: 'This blog is a fantastic resource for both beginners and experienced developers.' },
-        { author: 'Eva Rodriguez', content: 'The author has a great way of breaking down complex topics into easy-to-understand concepts.' },
+        { author: 'Chandan Singh Dangi', content: 'Absolutely love the content! It has been incredibly helpful in my coding journey.' },
+        { author: 'Dheeraj Singh', content: 'The tutorials are well-explained, and the code samples are clear. Great job!' },
+        { author: 'Karan Thakur', content: 'This blog is a fantastic resource for both beginners and experienced developers.' },
+        { author: 'Bro Code', content: 'The author has a great way of breaking down complex topics into easy-to-understand concepts.' },
       ];
       
       const popularTags = [
@@ -114,37 +115,25 @@ const Home = () => {
       )}
     </div>
             {/* PopularTages */}
-            <section className="my-12">
-  <h2 className="text-2xl font-bold mb-4 text-center border-b-2 border-blue-700 w-[40%] mx-auto">Popular Tags</h2>
-  <div className="flex flex-wrap gap-2">
-    {popularTags.map((tag, index) => (
-      <span key={index} className="text-white bg-gradient-to-tr  hover:bg-gradient-to-tr from-blue-600 to-violet-500  px-3 py-1 rounded-full">
-        {tag}
-      </span>
-    ))}
-  </div>
-</section>
-
-            {/* featuredImages */}
-             <section className='my-12 mx-auto'>
-      <h2 className="text-2xl font-bold mb-4 text-center border-b-2 border-blue-700 w-[40%] mx-auto">Featured Images</h2>
-    
-<div className='mx-auto'>
-<div className="grid grid-cols-1 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xl:gap-6">
-        {featuredImages.map((image, index) => (
-          <img key={index} src={image} alt={`Featured ${index + 1}`} className="max-w-full  h-auto" />
+    <section className="my-12">
+          <h2 className="text-2xl font-bold mb-4 text-center border-b-2 border-blue-700 w-[40%] mx-auto">Popular Tags</h2>
+      <div className="flex flex-wrap gap-2">
+          {popularTags.map((tag, index) => (
+            <span key={index} className="text-white bg-gradient-to-tr         hover:bg-gradient-to-tr from-blue-600 to-violet-500  px-3 py-1 rounded-full">
+                {tag}
+            </span>
         ))}
       </div>
-</div>
     </section>
+
             {/* Testimonials */}
             <section className='my-12 mx-auto'>
         <h2 className="text-2xl font-bold mb-4 text-center border-b-2 border-blue-700 w-[40%] mx-auto">Testimonials</h2>
         <Slider {...sliderSettings}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-100 p-4 rounded-md py-12 text-center">
+            <div key={index} className="bg-blue-300  p-4 rounded-md py-12 text-center">
                 <div className=' rounded-full flex justify-center items-center'>
-                <img className='rounded-full w-24 h-24' src={man} alt="" />
+                <img className='rounded-full w-20 h-20' src={user} alt="" />
                 </div>
               <p className='text-xl'>{testimonial.content}</p>
               <p className="font-bold text-2xl mt-2">- {testimonial.author}</p>
@@ -152,22 +141,39 @@ const Home = () => {
           ))}
         </Slider>
       </section>
-            {/* AboutMe */}
-            <section id='about'  className="text-center p-8 mx-auto bg-[#fdf9f9] my-12">
-  <h2 className="text-2xl font-bold mb-4 text-center border-b-2 border-blue-700 w-[40%] mx-auto">About Me</h2>
-  <p className="text-gray-700 leading-relaxed">
-    Welcome to my blog! I am passionate about technology, web development, and everything in between.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget est ac metus tincidunt varius.
-    Fusce euismod, felis a commodo vehicula, elit dolor commodo ipsum, a tristique elit justo vel risus.
+
+      
+            {/* AboutUs */}
+            <section id='about'  className="text-center p-8 mx-auto bg-blue-300 my-12">
+  <h2 className="text-2xl font-bold mb-4 text-center border-b-2 border-blue-700 w-[40%] mx-auto">About Us</h2>
+  {/* <p className="text-red-700 leading-relaxed">
+  </p> */}
+  <p>
+  Welcome to Blue Bird, where creativity meets expression. Whether you’re a seasoned writer, a hobbyist, or a business sharing insights, our platform is here to provide the tools, community, and inspiration you need to make your mark on the web.
+  We believe everyone has a unique story to tell, a fresh perspective to offer, and a voice worth hearing. That’s why we’ve created an easy-to-use, flexible, and powerful blogging platform designed to support your journey at every step.
   </p>
-  <p className="text-gray-700 leading-relaxed mt-4">
-    In my blog, you'll find articles on the latest trends in web development, programming tips, and tutorials.
-    I believe in the power of sharing knowledge and helping others in their coding journey.
+  <br />
+  <br />
+  <p className='font-bold text-xl border-b-2 border-blue-700 w-[40%] mx-auto'>What We Offer</p>
+  <p>
+    <ul className='text-left'>
+      <li>
+      <strong>Seamless Publishing:-</strong> Start writing and publishing your content with minimal hassle. Whether you're drafting posts, scheduling content, or making updates, everything is designed to be intuitive and efficient.
+      </li>
+      <li>
+      <strong>Customization:-</strong> Make your blog reflect your unique style. Our platform provides a wide range of customizable themes, layouts, and plugins to ensure your blog stands out.
+      </li>
+      <li>
+      <strong>Community Support:-</strong> Join a growing community of bloggers who share your passion for writing. Engage with readers and fellow bloggers through comments, discussions, and shared experiences
+      </li>
+      <li>
+      <strong>Monetization Tools:-</strong> Whether you're aiming to build a personal brand or run a business blog, we offer tools to help you monetize your content, including ads, affiliate marketing, and subscription options.
+      </li>
+      <li>
+        <strong>Analytics and Insights:-</strong> Keep track of your blog’s performance with our powerful analytics dashboard. Monitor traffic, engagement, and audience growth to understand what works and refine your content strategy.</li>
+    </ul>
   </p>
-  <p className="text-gray-700 leading-relaxed mt-4">
-    When I'm not coding, you can find me exploring new technologies, reading tech blogs, or enjoying a good cup of coffee.
-    Feel free to explore the blog and reach out if you have any questions or just want to connect!
-  </p>
+
 </section>
 
 {/* contactMe */}
@@ -218,13 +224,13 @@ const Home = () => {
         </div>
         <button
           type="submit"
-          className="text-white bg-gradient-to-tr from-violet-600 px-5 py-2 rounded-md to-blue-600 hover:bg-gradient-to-tr hover:from-blue-600 hover:to-violet-500"
+          className="text-white bg-gradient-to-tr from-violet-600 to-blue-600 hover:bg-gradient-to-tr hover:from-blue-600 hover:to-violet-500 px-5 py-2 rounded-md"
         >
           Submit
         </button>
       </form>
       <div className="md:w-1/2">
-      <img className="w-96 mx-auto" src={chat} alt="chat image" />
+      <img className="w-96 mx-auto" src={"/chat.png"} alt="chat image" />
     </div>
       </div>
     </section>

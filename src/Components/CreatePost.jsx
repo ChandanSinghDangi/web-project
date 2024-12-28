@@ -1,15 +1,17 @@
 /* eslint-disable no-dupe-keys */
 import  { useState } from 'react';
 import Post from './Post';
+// responsive-blog-template-with-CreateBlogOption
+
+
 
 const CreatePost = () => {
     const [posts, setPosts] = useState([]);
     const [newPost, setNewPost] = useState({
         title: '',
         content: '',
-       image: 'https://i.ibb.co/2d3NGnf/img.jpg', tags: '',
+       image: 'https://i.jpgibb.co/2d3NGnf/img.', tags: '',
         category: '',
-        image: null,
         imagePreview: null,
       });
       const handleInputChange = (e) => {
@@ -45,9 +47,8 @@ const CreatePost = () => {
           setNewPost({
             title: '',
             content: '',
-           image: 'https://i.ibb.co/2d3NGnf/img.jpg', tags: '',
-            category: '',  
-            image: null,
+           image: 'https://images.app.goo.gl/nRPUiPUFNbLQFsys7', tags: '',
+            category: '',
             imagePreview: null,
           });
         }
